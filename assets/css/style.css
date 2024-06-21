@@ -1,0 +1,124 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.board {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  background-image: url("../images/background.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* start todo form */
+
+#todo-form {
+  padding: 32px 32px 0;
+}
+
+#todo-form input {
+  padding: 12px;
+  margin-right: 12px;
+  width: 225px;
+  border: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+#todo-form button {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* end todo form */
+
+/* start lanes */
+.lanes {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 32px;
+  overflow: scroll;
+  height: 100%;
+}
+
+.swim-lane {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 225px;
+  min-height: 120px;
+  gap: 12px;
+  background-color: #f4f4f4;
+  padding: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.lanes .task {
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  color: black;
+  padding: 12px;
+  font-size: 16px;
+  cursor: move;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.is-dragging {
+  scale: 1.05;
+  box-shadow: 0px 5px 15px rgba(71, 71, 71, 0.25) !important;
+  background: rgb(79, 79, 79) !important;
+  color: white !important;
+  transform: skewY(1deg);
+  -webkit-transform: skewY(1deg);
+  -moz-transform: skewY(1deg);
+  -ms-transform: skewY(1deg);
+  -o-transform: skewY(1deg);
+}
+
+/* end lanes */
