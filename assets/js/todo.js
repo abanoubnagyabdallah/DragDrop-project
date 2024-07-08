@@ -10,7 +10,7 @@ function addTask() {
     if (task == "aaa" || task == "asd" || task == "sss") {
       Swal.fire({
         title: "Are you sure?",
-        text: "😒😒😒😒😒!",
+        text: "add your task",
         icon: "warning",
       });
       todoInput.value = "";

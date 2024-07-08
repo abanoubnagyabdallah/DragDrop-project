@@ -16,6 +16,7 @@
   height: 100vh;
   overflow: scroll;
   background-image: url("../images/background.avif");
+  /* background-image: url("https://cdn.sbisiali.com/news/images/e4eaff5f-f0ef-4057-a36c-65e873aacafe.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -114,11 +115,11 @@
   box-shadow: 0px 5px 15px rgba(71, 71, 71, 0.25) !important;
   background: rgb(79, 79, 79) !important;
   color: white !important;
-  transform: skewY(1deg);
-  -webkit-transform: skewY(1deg);
-  -moz-transform: skewY(1deg);
-  -ms-transform: skewY(1deg);
-  -o-transform: skewY(1deg);
+  transform: skewY(2deg);
+  -webkit-transform: skewY(2deg);
+  -moz-transform: skewY(2deg);
+  -ms-transform: skewY(2deg);
+  -o-transform: skewY(2deg);
 }
 
 /* end lanes */

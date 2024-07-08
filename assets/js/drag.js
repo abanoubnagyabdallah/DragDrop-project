@@ -10,37 +10,44 @@ draggables.forEach((task) => {
   });
 });
 
-droppables.forEach((zone) => {
-  zone.addEventListener("dragover", (e) => {
-    e.preventDefault();
+droppables.forEach((zone)=>{
+  zone.addEventListener('dragover',(e)=>{
+    e.preventDefault()
+    zone.appendChild(document.querySelector(".is-dragging"))
+  })
+})
 
-    const bottomTask = insertAboveTask(zone, e.clientY);
-    const curTask = document.querySelector(".is-dragging");
+// droppables.forEach((zone) => {
+//   zone.addEventListener("dragover", (e) => {
+//     e.preventDefault();
 
-    if (!bottomTask) {
-      zone.appendChild(curTask);
-    } else {
-      zone.insertBefore(curTask, bottomTask);
-    }
-  });
-});
+//     const bottomTask = insertAboveTask(zone, e.clientY);
+//     const curTask = document.querySelector(".is-dragging");
 
-const insertAboveTask = (zone, mouseY) => {
-  const els = zone.querySelectorAll(".task:not(.is-dragging)");
+//     if (!bottomTask) {
+//       zone.appendChild(curTask);
+//     } else {
+//       zone.insertBefore(curTask, bottomTask);
+//     }
+//   });
+// });
 
-  let closestTask = null;
-  let closestOffset = Number.NEGATIVE_INFINITY;
+// const insertAboveTask = (zone, mouseY) => {
+//   const els = zone.querySelectorAll(".task:not(.is-dragging)");
 
-  els.forEach((task) => {
-    const { top } = task.getBoundingClientRect();
+//   let closestTask = null;
+//   let closestOffset = Number.NEGATIVE_INFINITY;
 
-    const offset = mouseY - top;
+//   els.forEach((task) => {
+//     const { top } = task.getBoundingClientRect();
 
-    if (offset < 0 && offset > closestOffset) {
-      closestOffset = offset;
-      closestTask = task;
-    }
-  });
+//     const offset = mouseY - top;
 
-  return closestTask;
-};
+//     if (offset < 0 && offset > closestOffset) {
+//       closestOffset = offset;
+//       closestTask = task;
+//     }
+//   });
+
+//   return closestTask;
+// };
